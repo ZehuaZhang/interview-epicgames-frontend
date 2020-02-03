@@ -94,7 +94,8 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
-      DEBUG: false
+      DEBUG: false,
+      epicdomain: process.env.platform === 'heroku' ? 'https://interview-epicgames-backend.herokuapp.com' : ''
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

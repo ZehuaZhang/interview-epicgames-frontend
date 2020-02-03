@@ -26,17 +26,12 @@ export module ActionName {
 namespace Constants {
   export const maxRetryCount = 3
   export const LimitApiQuery = 10
-  export const domain = getDomain() || 'http://localhost:4000'
+  export const domain = process.env.epicdomain || 'http://localhost:4000'
   export const UserEndpoint = `${domain}/api/users?limit=${LimitApiQuery}`
   export const SearchEndpoint = `${domain}/api/search?limit=${LimitApiQuery}`
   export const UpdateUserEndpoint = `${domain}/api/users/`
   export const DeleteUserEndpoint = `${domain}/api/users/`
   export const AddUserEndpoint = `${domain}/api/users/`
-}
-
-function getDomain() {
-  console.log('hey', process.env.epicdomain)
-  return process.env.epicdomain
 }
 
 export interface IAction {
