@@ -1,0 +1,69 @@
+.sort-container {
+    height: 70px;
+    margin: 20px auto 10px auto;
+    max-width: 1000px;
+    
+    .sort-content {
+        display: table;
+        width: calc(100% - 40px);
+        padding: 20px;
+
+        font-family: Brutal,sans-serif;
+        color: #b0b4b4;
+ 
+        div {
+            display: table-cell;
+            text-align: center;
+            width: 21%;
+            overflow: hidden;
+            cursor: pointer;
+
+            span {
+                display: inline-block;
+            }
+
+            .sort-item-order {
+                width: 10px;
+                height: 20px;
+                position: absolute;
+                margin-left: 20px;
+            }
+
+            &:hover, &:focus {
+                color: white;
+                transition: 0.2s;
+            }
+        }
+
+        .sort-type-user-item-id {
+            width: 4%;
+        }
+
+        .sort-type-user-item-dateofbirth {
+            width: 12%;
+        }
+
+        button {
+            border-radius: 4px;
+            background: white;
+            border: 1px solid #D6DADC;
+            background: #F7F9FA;
+            width: 56px;
+            font-size: 35px;
+            color: #0073b2;
+            float: right;
+            height: 100%;
+            cursor: pointer;
+
+            &:focus, &:hover {
+                outline: none;
+            }
+
+            &:hover {
+                outline: none;
+                background: white;
+                transition: 0.2s;
+            }
+        }
+    }
+}
