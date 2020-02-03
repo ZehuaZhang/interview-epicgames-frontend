@@ -14,7 +14,8 @@
   "author": ".zZehua",
   "scripts": {
     "client": "webpack-dev-server --mode development --port $PORT --host 0.0.0.0 --disable-host-check --progress --color --config config/webpack.config.js",
-    "local": "yarn start --open --hot"
+    "local": "yarn start --open --hot",
+    "start": "yarn client"
   },
   "license": "MIT",
   "devDependencies": {
